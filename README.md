@@ -45,16 +45,20 @@ http://www.pitagora-galaxy.org/download
 
 参考: [統合TV「Pitagora Galaxyを使ってマウス操作だけでRNA-seq解析をする」](http://doi.org/10.7875/togotv.2016.054)
 
-【課題1】 NGS tools -> FASTQC を実行してみましょう。
-- 気になるFASTQデータをSRAからダウンロードしましょう -> [DBCLS SRA](http://sra.dbcls.jp/)
+-【課題1】 SRAから興味深いデータを検索して、NGS tools -> FASTQC を実行してみましょう。
+
+- 気になるFASTQデータをSRAからダウンロードしましょう
+	-  [DBCLS SRA](http://sra.dbcls.jp/)の利用
 - 左上のアップロードアイコンにデータをアップロード
-- 
+
 ### Trinity
 
 - [Trinity](https://trinityrnaseq.github.io/)は、よく使われている de novo transcriptome assembly のツール。
 
 - Citation: Nat Biotechnol. 2011 May 15;29(7):644-52. [doi:10.1038/nbt.1883](http://doi.org/10.1038/nbt.1883)
 
+-【課題2】Trinityをインストールして、SRAから興味深いRNA-seqのデータを検索して、Trinityを実行してみましょう。
+ 
 #### インストール
 
 - MacOSX + [homebrew](http://brew.sh/index_ja.html)だと以下のコマンドでインストール完了
@@ -80,9 +84,10 @@ http://www.pitagora-galaxy.org/download
 #### 発現定量
 
 - [```align_and_estimate_abundance.pl```](https://github.com/trinityrnaseq/trinityrnaseq/wiki/Trinity-Transcript-Quantification) を使うと、転写量を見積もって定量できる。
+	- Trinityをhomebrewでインストールすると```/usr/local/Cellar/trinity/2.3.2/util/```以下にインストールされているはず。
 - RSEM(RNA-Seq by Expectation-Maximization), bowtie2を追加インストールする必要がある
 	- RSEM: http://deweylab.github.io/RSEM/ からダウンロードの上、```make```して```make install```
-	- bowtie2:  ```brew install -v bowtie2```でインストール可能
+	- bowtie2:  ```brew install -v bowtie2```でインストール可能。TopHat2を入れてあれば入っているはず。
 - 以下のようなスクリプト(```align_and_estimate_abundance.sh```)で実行可能
 
 ```align_and_estimate_abundance.sh
@@ -96,6 +101,8 @@ http://www.pitagora-galaxy.org/download
 --trinity_mode \
 --prep_reference --output_dir rsem_outdir
 ```
+
+-【課題3】```align_and_estimate_abundance.sh```を用いて、発現定量してみましょう。
 
 - 参考: [ぼうのブログ: Trinityで転写産物を定量する](http://bonohu.jp/blog/2016/05/27/trinity-transcript-quantification/)
 
