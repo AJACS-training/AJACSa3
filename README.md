@@ -79,7 +79,7 @@ http://www.pitagora-galaxy.org/download
 指定するFASTQファイルは(gzip, bzip2)圧縮されていても大丈夫の模様。```--max_memory```で使用メモリ上限、```--CPU```で使用するCPU数を指定。
 
 - 出力結果は、転写単位ごとの塩基配列のFASTA形式ファイル。実行したディレクトリの下に```trinity_out_dir```というディレクトリが作成され、その中の```Trinity.fasta```というファイルがそれ。
-- 参考: [ぼうのブログ: Trinityで転写産物を定量する](http://bonohu.jp/blog/2016/05/09/trinity-on-macosx/)
+- 参考: [ぼうのブログ: Trinityで転写産物を定量する](http://bonohu.jp/blog/2016/05/09/trinity-on-macosx/) もしくは[こちら（バックアップ）](https://bonohu.wordpress.com/2016/05/09/trinity-on-macosx/)
 
 #### 発現定量
 
@@ -104,8 +104,9 @@ http://www.pitagora-galaxy.org/download
 
 -【課題3】```align_and_estimate_abundance.sh```を用いて、発現定量してみましょう。
 
-- 参考: [ぼうのブログ: Trinityで転写産物を定量する](http://bonohu.jp/blog/2016/05/27/trinity-transcript-quantification/)
+- 参考: [ぼうのブログ: Trinityで転写産物を定量する](http://bonohu.jp/blog/2016/05/27/trinity-transcript-quantification/) もしくは[こちら（バックアップ）](https://bonohu.wordpress.com/2016/05/27/trinity-transcript-quantification/)
+
 
 #### トラブルシューティング
 - 多くはメモリ不足。どうしても実行できない場合は、遺伝研スパコンなど大きなメモリ空間が使えるマシン利用を検討
--  [ぼうのブログ: single end readsでTrinityがコケる](http://bonohu.jp/blog/2016/08/29/problem-assembling-single-end-reads/)
+-  [ぼうのブログ: single end readsでTrinityがコケる](http://bonohu.jp/blog/2016/08/29/problem-assembling-single-end-reads/)　もしくは[こちら（バックアップ）](http://bonohu.wordpress.com/2016/08/29/problem-assembling-single-end-reads/)
